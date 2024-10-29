@@ -1,0 +1,87 @@
+@import './variables';
+@import './mixins';
+
+@include respond(1400) {
+    .services-list, .skills-list, .projects-list {
+        flex-direction: row;
+    }
+}
+
+@include respond(1200) {
+    .header {
+        padding: 1.5rem;
+    }
+}
+
+@include respond(992) {
+    .profile h1 {
+        font-size: 1.5rem;
+    }
+    header {
+        h1 {
+            display: none; /* Hide title on smaller screens */
+        }
+
+        .nav__menu {
+            display: none; /* Hide menu by default */
+            position: absolute;
+            top: 60px;
+            left: 0;
+            background-color: $primary-color;
+            flex-direction: column;
+            width: 90%;
+            text-align: center;
+
+            li {
+                margin: 10px 0;
+                width: 90%;
+            }
+
+            &.active {
+                display: flex; /* Show menu when active */
+            }
+        }
+
+        .hamburger {
+            display: flex; /* Show hamburger icon */
+        }
+    }
+    #skills .container .skills-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@include respond(768) {
+
+    #profile .container {
+        flex-direction: column;
+        padding: 2rem 0;
+        img {
+            width: 158px;
+            margin: 0 auto 15px auto
+        }
+    }
+
+    .services-list, .skills-list, .projects-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #skills .container .skills-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .header .header-content {
+        display: none;
+    }
+
+}
+
+@include respond(576) {
+    .header {
+        padding: 1rem;
+    }
+    .header .header-content {
+        display: none;
+    }
+}

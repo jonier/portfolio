@@ -1,0 +1,247 @@
+header {
+  padding: 20px;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  /* Navigation Menu */
+  /* Hamburger Menu Icon */
+}
+header .container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #f5f2ec;
+}
+header h1 {
+  font-size: 1.8rem;
+}
+header .nav__menu {
+  display: flex;
+  list-style: none;
+}
+header .nav__menu li {
+  margin-left: 20px;
+}
+header .nav__menu li a {
+  color: #f5f2ec;
+  text-decoration: none;
+}
+header .hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+header .hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #f5f2ec;
+  margin: 4px 0;
+}
+
+#profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 0;
+}
+#profile .container {
+  color: #333;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+}
+#profile .container img {
+  height: 200px;
+  border-radius: 50%;
+  margin-right: 30px;
+}
+#profile .container p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+
+#services {
+  background-color: #f5f2ec;
+  color: #333;
+  padding: 2rem 0;
+  text-align: center;
+}
+#services h2 {
+  margin-bottom: 1.5rem;
+}
+#services .services-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#services .services-list .service-item {
+  background-color: #333;
+  color: #f5f2ec;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+#skills {
+  padding: 2rem 0;
+  text-align: center;
+}
+#skills .container {
+  max-width: 888px;
+  width: 100%;
+  margin: 0 auto;
+}
+#skills .container h2 {
+  margin-bottom: 1.5rem;
+}
+#skills .container .skills-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+#skills .container .skills-list .skill-item {
+  background-color: #f5f2ec;
+  color: #333;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 200px;
+}
+
+.projects {
+  background-color: #f5f2ec;
+  padding: 2rem 0;
+  text-align: center;
+}
+.projects h2 {
+  margin-bottom: 1.5rem;
+}
+.projects .projects-list {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.projects .projects-list .project-item {
+  background-color: #333;
+  color: #f5f2ec;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  text-align: center;
+}
+
+.contact {
+  padding: 2rem 0;
+  text-align: center;
+}
+.contact h2 {
+  margin-bottom: 1.5rem;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+.contact form input, .contact form textarea, .contact form button {
+  padding: 0.5rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 17px;
+}
+.contact form button {
+  background-color: #333;
+  color: #f5f2ec;
+  cursor: pointer;
+}
+
+.footer {
+  background-color: #333;
+  color: #f5f2ec;
+  padding: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 1400px) {
+  .services-list, .skills-list, .projects-list {
+    flex-direction: row;
+  }
+}
+@media (max-width: 1200px) {
+  .header {
+    padding: 1.5rem;
+  }
+}
+@media (max-width: 992px) {
+  .profile h1 {
+    font-size: 1.5rem;
+  }
+  header h1 {
+    display: none; /* Hide title on smaller screens */
+  }
+  header .nav__menu {
+    display: none; /* Hide menu by default */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+  }
+  header .nav__menu li {
+    margin: 10px 0;
+    width: 90%;
+  }
+  header .nav__menu.active {
+    display: flex; /* Show menu when active */
+  }
+  header .hamburger {
+    display: flex; /* Show hamburger icon */
+  }
+  #skills .container .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  #profile .container {
+    flex-direction: column;
+    padding: 2rem 0;
+  }
+  #profile .container img {
+    width: 158px;
+    margin: 0 auto 15px auto;
+  }
+  .services-list, .skills-list, .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  #skills .container .skills-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .header .header-content {
+    display: none;
+  }
+}
+@media (max-width: 576px) {
+  .header {
+    padding: 1rem;
+  }
+  .header .header-content {
+    display: none;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

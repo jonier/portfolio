@@ -1,0 +1,26 @@
+#services {
+    background-color: $secondary-color;
+    color: $text-color;
+    padding: 2rem 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    .services-list {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        .service-item {
+            background-color: $primary-color;
+            color: $secondary-color;
+            padding: 1rem;
+            border-radius: $border-radius;
+            width: 100%;
+            max-width: 250px;
+            text-align: center;
+        }
+    }
+}

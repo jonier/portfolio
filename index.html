@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Jonier Murillo Hurtado</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<script>
+    function toggleMenu() {
+        console.log('Hola mi amigo: ')
+        const navMenu = document.getElementById('navMenu');
+        navMenu.classList.toggle('active');
+    }
+</script>
+<body>
+    <header>
+        <div class="container">
+            <h1>Jonier Murillo Hurtado</h1>
+            <nav>
+                <ul class="nav__menu" id="navMenu">
+                    <li><a href="#profile">Profile</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experiences">Experiences</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </nav>
+        </div>
+    </header>    
+
+    <section id="profile">
+        <h2>Profile</h2>
+        <div class="container">
+            <img src="./assets/JonierAvatar.jpg" title="Jonier Murillo Hurtado" />
+            <p>I’m a versatile web and mobile developer with over six years of experience in creating high-quality, scalable applications across front-end and back-end technologies. My expertise includes JavaScript (React.js and React Native) and PHP, which I use to design and implement user-friendly, responsive interfaces and robust back-end systems. Skilled in adapting quickly to new technologies and frameworks, I have a strong commitment to delivering efficient and effective solutions. Fluent in English, French, and Spanish, I thrive in collaborative environments and am comfortable working independently to achieve project goals.</p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <div class="services-list">
+            <div class="service-item">
+                <h3>Front-end Development</h3>
+                <p>Creation of visually appealing and functional user interfaces, optimized to enhance user experience. Proficient in modern technologies such as <strong>React.js</strong>, <strong>Redux</strong>, and <strong>Material UI</strong> to build interactive, responsive web applications.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Back-end Development</h3>
+                <p>Design and development of scalable server systems and RESTful APIs, ensuring optimal performance and security. Skilled in <strong>Node.js</strong> with <strong>Express</strong> and <strong>Sequelize</strong>, as well as experience with <strong>PHP</strong> and <strong>Laravel</strong> for custom projects.</p>
+            </div>
+
+            <div class="service-item">
+                <h3>Mobile Development</h3>
+                <p>Creation of cross-platform mobile applications with <strong>React Native</strong>, optimized for both iOS and Android. Experienced in designing intuitive apps that provide a seamless experience on any device.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <h3>JavaScript</h3>
+                    <p>Proficient in JavaScript for building dynamic web applications, with a strong understanding of ES6+ features.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>React.js</h3>
+                    <p>In-depth knowledge of React.js, including hooks and lifecycle methods, for creating reusable components.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Node.js</h3>
+                    <p>Skilled in developing server-side applications with Node.js, including middleware and API integration.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>PHP</h3>
+                    <p>Experience in developing server-side applications with PHP, including MVC architecture and RESTful services.</p>
+                    </div>
+                <div class="skill-item">
+                    <h3>Database Management</h3>
+                    <p>Proficient in managing databases such as MongoDB and MySQL, including schema design and query optimization.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Version Control & Collaboration</h3>
+                    <p>Experienced in using Git for version control and collaborating on projects through platforms like GitHub.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Testing & Quality Assurance</h3>
+                    <p>Knowledge of testing frameworks like Jest for ensuring code quality and reliability in applications.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Cloud Services</h3>
+                    <p>Understanding of cloud services integration for scalable applications, including deployment on platforms like AWS.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="projects">
+        <h2>Proyectos</h2>
+        <div class="projects-list">
+            <div class="project-item">Tiggidoo</div>
+            <div class="project-item">Fantech</div>
+            <div class="project-item">Personal</div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Contacto</h2>
+        <form>
+            <input type="text" placeholder="Nombre">
+            <input type="email" placeholder="Correo electrónico">
+            <textarea placeholder="Mensaje"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>© 2024 Jonier Murillo Hurtado</p>
+    </footer>
+</body>
+</html>
