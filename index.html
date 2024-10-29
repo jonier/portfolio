@@ -7,10 +7,30 @@
     <link rel="stylesheet" href="css/main.css">
 </head>
 <script>
-    function toggleMenu() {
+    const toggleMenu = () => {
         console.log('Hola mi amigo: ')
         const navMenu = document.getElementById('navMenu');
         navMenu.classList.toggle('active');
+    }
+
+    const toggleAccordion = (button) =>{
+        const project = button.closest('.project');
+        project.classList.toggle('active');
+    }
+
+
+
+    const openModal = (image) => {
+        const modal = document.getElementById("imageModal");
+        const modalImage = document.getElementById("modalImage");
+        
+        modal.style.display = "flex"; // Show the modal with flex for centering
+        modalImage.src = image.src; // Set the modal image source to the clicked image
+    }
+
+    const closeModal = () => {
+        const modal = document.getElementById("imageModal");
+        modal.style.display = "none"; // Hide the modal
     }
 </script>
 <body>
@@ -22,8 +42,8 @@
                     <li><a href="#profile">Profile</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#experiences">Experiences</a></li>
-                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Experience</a></li>
+                    <!-- <li><a href="#education">Education</a></li> -->
                     <li><a href="#contact">Contact</a></li>
                 </ul>
                 <div class="hamburger" onclick="toggleMenu()">
@@ -103,24 +123,132 @@
         </div>
     </section>
 
+    <section id="projects">
+        <h2>Experience</h2>
 
-    <section class="projects">
-        <h2>Proyectos</h2>
-        <div class="projects-list">
-            <div class="project-item">Tiggidoo</div>
-            <div class="project-item">Fantech</div>
-            <div class="project-item">Personal</div>
+        <!-- Tiggidoo Project -->
+        <div class="project">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <h3>Tiggidoo</h3>
+            </button>
+            <div class="accordion-content">
+                <p class="company-description">Tiggidoo specializes in residential cleaning and laundry services.</p>
+                <div class="project-details">
+                    <div class="tasks">
+                        <h3>Position: Frontend Developer</h3>
+                        <h4>Tasks Accomplished</h4>
+                        <ul>
+                            <li>Developed and maintained dynamic, high-performance web applications using <strong>React.js, Redux, Material UI and TypeScript</strong></li>
+                            <li><strong>Led the front-end</strong> development for mobile applications with <strong>React Native</strong>, improving user engagement by 20%</li>
+                            <li>Integrated <strong>RESTful APIs</strong> for data handling</li>
+                        </ul>
+                        <h3>Tools: React js, Redux, React-native, Material UI, VS Code, Git, Rest API, google APIs, Postman</h3>
+                    </div>
+                    <div class="image-gallery">
+                        <img src="assets/prolistrequest.png" alt="Tiggidoo Project Image 1" onclick="openModal(this)">
+                        <img src="assets/prorequest1.png" alt="Tiggidoo Project Image 2" onclick="openModal(this)">
+                        <img src="assets/prorequest2.png" alt="Tiggidoo Project Image 2" onclick="openModal(this)">
+                        <img src="assets/prorequest3.png" alt="Tiggidoo Project Image 2" onclick="openModal(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rest Api Project -->
+        <div class="project">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <h3>E-Shop Node</h3>
+            </button>
+            <div class="accordion-content">
+                <p class="company-description">
+                    Developed a REST API for educational purposes using Node.js, focused on demonstrating backend functionality and data management.
+                    <a href="https://github.com/jonier/api-store" target="_blank">Click here to view the GitHub repository</a>
+                </p>
+                <div class="project-details">
+                    <div class="tasks">
+                        <h3>Position: Back-end</h3>
+                        <h4>Tasks Accomplished</h4>
+                        <ul>
+                            <li>Developed a Create, Read, Update, and Delete (CRUD) system for users, products, and purchase orders in a virtual store.</li>
+                            <li>Utilized Express as the Node.js framework to handle HTTP requests and simplify the development process.</li>
+                            <li>Employed Sequelize as the Object-Relational Mapping (ORM) tool for interaction with a MySQL database.</li>
+                            <!-- <li>Used Sequelize for data handling and validation.</li> -->
+                            <!-- <li>Defined models using Sequelize, establishing the structure of the database entities.</li> -->
+                            <!-- <li>Executed database queries to retrieve information and create relationships between tables.</li>                     -->
+                            <li>Utilized Swagger to display the CRUD endpoints for each of the models created, specifically for users, products, and purchase orders.</li>
+                            <!-- <li>Provided an interactive interface for exploring the API.</li> -->
+                            <li>Used jsonwebtoken to generate JSON Web Tokens, which facilitated user authentication within the application.</li>
+                        </ul>
+                        <h3>Tools: Node js, Express, Sequelize, jsonwebtoken, Swagger, VSCode, Postman.</h3>
+                    </div>
+                    <div class="image-gallery">
+                        <img src="assets/swagger1.png" alt="RestApi Image 1" onclick="openModal(this)">
+                        <img src="assets/swagger2.png" alt="RestApi Image 2" onclick="openModal(this)">
+                        <img src="assets/swagger3.png" alt="RestApi Image 3" onclick="openModal(this)">
+                        <img src="assets/swagger4.png" alt="RestApi Image 4" onclick="openModal(this)">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Onkard Project -->
+        <div class="project">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <h3>Onkard</h3>
+            </button>
+            <div class="accordion-content">
+                <p class="company-description">The company offers software that enables users to redeem Visa card points directly through an online store.</p>
+                <div class="project-details">
+                    <div class="tasks">
+                        <h3>Position: Integrator Web</h3>
+                        <h4>Tasks Accomplished</h4>
+                        <ul>
+                            <li>Maintained interfaces related to customer experience.</li>
+                            <li>Implemented designs on websites.</li>
+                            <li>Fixed bugs and tested for usability.</li>
+                            <li>Collaborated with the backend team (35% of the time).</li>
+                        </ul>
+                        <h3>Tools: HTML, Bootstrap, Jquery, Sass, Git, SVN, Joomla, Jira, Invision.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Fantech Project -->
+        <div class="project">
+            <button class="accordion-btn" onclick="toggleAccordion(this)">
+                <h3>Fantech Software</h3>
+            </button>
+            <div class="accordion-content">
+                <p class="company-description">Fantech is a sports betting and contest platform specializing in major sports leagues, including the NFL, NHL, MLB, and the Premier League.</p>
+                <div class="project-details">
+                    <div class="tasks">
+                        <h3>Position: Integrator Web</h3>
+                        <h4>Tasks Accomplished</h4>
+                        <ul>
+                            <li>Maintained applications to ensure optimal performance.</li>
+                            <li>Created a WordPress application for exchanging products like t-shirts, caps, and toys for points.</li>
+                            <li>Developed a reporting system using Scriptcase.</li>
+                            <li>Migrated an application from CodeIgniter to Yii2.</li>
+                        </ul>
+                        <h3>Tools: Laravel 5.5, YII2(Framework PHP), JQuery, Bootstrap, HTML, MySql, Vue.js Scriptcase, GIT, Jira, SublimeText.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal for Enlarged Images -->
+        <div id="imageModal" class="modal" onclick="closeModal()">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="modalImage">
         </div>
     </section>
 
-    <section class="contact">
-        <h2>Contacto</h2>
-        <form>
-            <input type="text" placeholder="Nombre">
-            <input type="email" placeholder="Correo electrónico">
-            <textarea placeholder="Mensaje"></textarea>
-            <button type="submit">Enviar</button>
-        </form>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <p>You can reach me via my email address:</p>
+        <a href="mailto:jonierm@gmail.com">jonierm@gmail.com</a>
     </section>
 
     <footer class="footer">

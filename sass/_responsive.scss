@@ -2,7 +2,7 @@
 @import './mixins';
 
 @include respond(1400) {
-    .services-list, .skills-list, .projects-list {
+    .services-list, .skills-list {
         flex-direction: row;
     }
 }
@@ -62,7 +62,7 @@
         }
     }
 
-    .services-list, .skills-list, .projects-list {
+    .services-list, .skills-list {
         flex-direction: column;
         align-items: center;
     }
@@ -74,7 +74,16 @@
     .header .header-content {
         display: none;
     }
+    #projects .project .accordion-content .project-details {
+        grid-template-columns: 1fr; // Change to a single column
+        grid-template-rows: auto auto; // Define two rows for better control
+        gap: 1rem;
+    }
 
+    #projects .project .accordion-content .project-details .image-gallery {
+        grid-template-columns: repeat(2, 1fr); // Adjust to two columns in image gallery
+    }
+    
 }
 
 @include respond(576) {
